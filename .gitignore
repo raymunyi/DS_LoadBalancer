@@ -145,3 +145,20 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# Pyre
+# Ignore Pyre type checker files
+.pyre/
+
+# pytype
+# Ignore pytype static type analyzer files
+.pytype/
+
+# Cython
+# Ignore Cython debug symbols
+cython_debug/
+
+# JetBrains IDE
+# Ignore JetBrains-specific files and directories
+# .idea/
+# Uncomment the next line to ignore the entire .idea/ directory
+#.idea/
