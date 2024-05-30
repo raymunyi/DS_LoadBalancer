@@ -95,6 +95,6 @@ class LoadBalancer:
     def random_hostname(length=6):
         return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
 
-# if __name__ == '__main__':
-#     load_balancer = LoadBalancer()
-#     load_balancer.run()
+if __name__ == '__main__':
+    load_balancer = LoadBalancer()
+    load_balancer.run()
