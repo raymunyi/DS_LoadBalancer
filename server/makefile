@@ -1,7 +1,5 @@
 # Define variables
 IMAGE_NAME := load-balancer-server
-CONTAINER_NAME := web-server
-SERVER_ID := 1
 
 .PHONY: all build run clean
 
@@ -14,9 +12,9 @@ build:
 
 # Run the Docker container
 run:
-    docker run -d -p 5000:5000 --name $(CONTAINER_NAME) -e SERVER_ID=$(SERVER_ID) $(IMAGE_NAME)
+    docker run -d -p 5000:5000 --name web-server -e SERVER_ID=1 $(IMAGE_NAME)
 
 # Stop and remove the Docker container
 clean:
-    docker stop $(CONTAINER_NAME)
-    docker rm $(CONTAINER_NAME)
+    docker stop web-server
+    docker rm web-server

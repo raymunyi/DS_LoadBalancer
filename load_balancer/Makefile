@@ -1,7 +1,7 @@
 # Define variables
 COMPOSE_FILE := docker-compose.yml
 
-.PHONY: all build up down clean
+.PHONY: build up down clean
 
 # Default target
 all: build up
