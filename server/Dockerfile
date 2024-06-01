@@ -20,4 +20,4 @@ ENV SERVER_ID="3"
 EXPOSE 5000
 
 # Command to run the Flask application
-CMD ["python", "server.py"]
+CMD ["python", "app.py"]
