@@ -14,6 +14,8 @@ build:
 run:
     docker run -d -p 5000:5000 --name web-server -e SERVER_ID=1 $(IMAGE_NAME)
 
+
+
 # Stop and remove the Docker container
 clean:
     docker stop web-server

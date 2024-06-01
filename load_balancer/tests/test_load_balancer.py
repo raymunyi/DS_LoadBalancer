@@ -4,7 +4,7 @@ import random
 import matplotlib.pyplot as plt
 import json
 
-LOAD_BALANCER_URL = 'http://localhost:5000'
+LOAD_BALANCER_URL = 'http://localhost:5002'
 
 async def send_request(session, path):
     async with session.get(f'{LOAD_BALANCER_URL}/{path}') as response:

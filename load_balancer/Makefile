@@ -1,5 +1,5 @@
 # Define variables
-COMPOSE_FILE := docker-compose.yml
+COMPOSE_FILE := docker-compose.yaml
 
 .PHONY: build up down clean
 
@@ -7,17 +7,13 @@ COMPOSE_FILE := docker-compose.yml
 all: build up
 
 # Build the Docker images
-build:
-    docker-compose -f $(COMPOSE_FILE) build
+build:	docker-compose -f	$(COMPOSE_FILE)	build
 
 # Start the containers
-up:
-    docker-compose -f $(COMPOSE_FILE) up -d
+up:	docker-compose -f	$(COMPOSE_FILE)	up -d
 
 # Stop and remove the containers
-down:
-    docker-compose -f $(COMPOSE_FILE) down
+down:	docker-compose -f	$(COMPOSE_FILE)	down
 
 # Clean up the Docker environment
-clean: down
-    docker system prune -f
+clean: down	docker system prune -f
