@@ -1,10 +1,11 @@
+# test_load_balancer.py
 import asyncio
 import aiohttp
 import random
 import matplotlib.pyplot as plt
 import json
 
-LOAD_BALANCER_URL = 'http://localhost:5002'
+LOAD_BALANCER_URL = 'http://localhost:5000/'
 
 async def send_request(session, path):
     async with session.get(f'{LOAD_BALANCER_URL}/{path}') as response:
