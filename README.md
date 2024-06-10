@@ -42,7 +42,9 @@ Servers are homogeneous in terms of hardware and software configuration.
 
 Testing
 Unit tests are provided to ensure the correctness of individual components.
-Integration tests validate the behavior of the load balancer and servers in a simulated environment.
+Integration tests validate the behavior of the load balancer and servers in a simulated environment as seen in the image folder 
+(DS_LoadBalancer\Images)
+
 Load testing is performed to assess the system's performance under various traffic conditions.
 
 Design Choices
