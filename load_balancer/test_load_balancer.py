@@ -1,4 +1,3 @@
-# test_load_balancer.py
 import asyncio
 import aiohttp
 import random
@@ -9,7 +8,11 @@ LOAD_BALANCER_URL = 'http://localhost:5000/'
 
 async def send_request(session, path):
     async with session.get(f'{LOAD_BALANCER_URL}/{path}') as response:
-        return await response.text()
+        try:
+            text = await response.text()
+            return text
+        except Exception as e:
+            return str(e)
 
 async def launch_requests(num_requests):
     async with aiohttp.ClientSession() as session:
@@ -23,11 +26,16 @@ async def launch_requests(num_requests):
 def count_responses(responses):
     counts = {}
     for response in responses:
-        server_id = json.loads(response).get('message').split(': ')[-1]
-        if server_id in counts:
-            counts[server_id] += 1
-        else:
-            counts[server_id] = 1
+        try:
+            server_id = json.loads(response).get('message').split(': ')[-1]
+            if server_id in counts:
+                counts[server_id] += 1
+            else:
+                counts[server_id] = 1
+        except json.JSONDecodeError as e:
+            print(f"Failed to decode JSON: {response}")
+        except Exception as e:
+            print(f"Unexpected error: {str(e)}")
     return counts
 
 def plot_bar_chart(data, title):
@@ -35,7 +43,9 @@ def plot_bar_chart(data, title):
     plt.xlabel('Server ID')
     plt.ylabel('Number of Requests')
     plt.title(title)
-    plt.show()
+    # plt.show()
+    plt.savefig('request_distribution.png')
+
 
 async def run_experiment(num_requests):
     responses = await launch_requests(num_requests)
