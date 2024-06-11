@@ -56,3 +56,15 @@ Performance Analysis
 The performance of the load balancer is evaluated based on metrics such as response time, throughput, and resource utilization.
 Scalability tests are conducted to assess the system's ability to handle increasing loads by adding more servers.
 Benchmarking tools are used to measure the impact of different configuration settings on performance.
+
+![testing server 1](https://github.com/raymunyi/DS_LoadBalancer/assets/109039274/5670f8fa-7250-4be8-bab6-0bfcd90c66df)
+
+
+![testing2](https://github.com/raymunyi/DS_LoadBalancer/assets/109039274/96baad31-72a6-4590-b981-ef0bfea84332)
+
+
+![testing3](https://github.com/raymunyi/DS_LoadBalancer/assets/109039274/1fdbb2dc-e545-4494-ab55-98204eb8c4be)
+
+![testing 4](https://github.com/raymunyi/DS_LoadBalancer/assets/109039274/97450082-e805-4449-a23d-9904f831cc78)
+
+![testing5](https://github.com/raymunyi/DS_LoadBalancer/assets/109039274/c7c44f92-ca14-4f91-8ac0-8d6afd49dd90)
