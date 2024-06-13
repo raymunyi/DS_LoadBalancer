@@ -64,6 +64,10 @@ Load testing is performed to assess the system's performance under various traff
 
 ![testing5](https://github.com/raymunyi/DS_LoadBalancer/assets/109039274/c7c44f92-ca14-4f91-8ac0-8d6afd49dd90)
 
+
+![testing6](https://github.com/raymunyi/DS_LoadBalancer/assets/109039274/8eeb7396-bfbe-4d59-a2ae-56af80ac28b3)
+
+
 Design Choices
 Consistent hashing is chosen for request distribution due to its ability to maintain a balanced load even when servers are added or removed from the pool.
 Docker is used for containerization to ensure consistency and portability across different environments.
